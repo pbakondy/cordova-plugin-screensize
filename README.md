@@ -53,7 +53,7 @@ Return values:
 
 ## Browser Platform Quirks
 
-The plugin returns the dimensions of the viewport. The `diameter` value is null because you can't get the real physical dimensions or the actual DPI of the browser ( [see](http://stackoverflow.com/a/21767407) ).
+The plugin returns the dimensions of the viewport. You can't get the real physical dimensions or the actual DPI of the browser ( [see](http://stackoverflow.com/a/21767407) ).
 
 Return values:
 
