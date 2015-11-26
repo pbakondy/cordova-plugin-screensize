@@ -12,7 +12,7 @@ import org.json.JSONException;
 import android.content.Context;
 import android.util.DisplayMetrics;
 
-public class Screensize extends CordovaPlugin {
+public class ScreenSize extends CordovaPlugin {
 
   @Override
   public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -26,7 +26,8 @@ public class Screensize extends CordovaPlugin {
       int width = dm.widthPixels;
       int height = dm.heightPixels;
 
-      double wi = (double)width / (double)dm.xdpi;
+      double xdpi = (double)dm.xdpi;
+      double wi = (double)width / xdpi;
       double he = (double)height / (double)dm.ydpi;
       double x = Math.pow(wi, 2);
       double y = Math.pow(he, 2);
@@ -39,6 +40,7 @@ public class Screensize extends CordovaPlugin {
         result.put("width", width);
         result.put("height", height);
         result.put("diameter", screenInches);
+        result.put("dpi", xdpi);
       } catch (JSONException e) {}
 
       callbackContext.success(result);

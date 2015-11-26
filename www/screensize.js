@@ -2,6 +2,6 @@
 
 module.exports = {
   get: function (successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'screensize', 'get', []);
+    cordova.exec(successCallback, errorCallback, 'ScreenSize', 'get', []);
   }
 };

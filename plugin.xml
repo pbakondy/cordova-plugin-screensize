@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="cordova-plugin-screensize"
-  version="1.0.0">
+  version="1.1.0">
 
   <name>screensize</name>
   <description>A cordova plugin to get the physical size of the device screen</description>
@@ -22,12 +22,37 @@
   <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="screensize">
-        <param name="android-package" value="com.pbakondy.Screensize"/>
+      <feature name="ScreenSize">
+        <param name="android-package" value="com.pbakondy.ScreenSize"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/com/pbakondy/Screensize.java" target-dir="src/com/pbakondy" />
+    <source-file src="src/android/com/pbakondy/ScreenSize.java" target-dir="src/com/pbakondy" />
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ScreenSize">
+        <param name="ios-package" value="ScreenSize" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/ScreenSize.h"/>
+    <source-file src="src/ios/ScreenSize.m"/>
+  </platform>
+
+  <!-- browser -->
+  <platform name="browser">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ScreenSize">
+        <param name="browser-package" value="ScreenSize" />
+      </feature>
+    </config-file>
+
+    <js-module src="src/browser/ScreenSizeProxy.js" name="ScreenSizeProxy">
+      <runs />
+    </js-module>
   </platform>
 
 </plugin>

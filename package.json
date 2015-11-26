@@ -1,11 +1,13 @@
 {
   "name": "cordova-plugin-screensize",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A cordova plugin to get the physical size of the device screen",
   "cordova": {
     "id": "cordova-plugin-screensize",
     "platforms": [
-      "android"
+      "android",
+      "ios",
+      "browser"
     ]
   },
   "repository": {
@@ -19,8 +21,11 @@
     "width",
     "height",
     "diameter",
+    "viewport",
     "ecosystem:cordova",
-    "cordova-android"
+    "cordova-android",
+    "cordova-ios",
+    "cordova-browser"
   ],
   "engines": [
     {
