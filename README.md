@@ -1,5 +1,7 @@
 # cordova-plugin-screensize
 
+![Platform](https://img.shields.io/badge/platform-android%20%7C%20ios%20%7C%20browser-lightgrey.svg)
+
 A cordova plugin to get the size of the device screen.
 
 ## Installation
