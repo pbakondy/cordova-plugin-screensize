@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-screensize",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A cordova plugin to get the size of the device screen",
   "cordova": {
     "id": "cordova-plugin-screensize",

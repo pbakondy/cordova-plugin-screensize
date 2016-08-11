@@ -27,8 +27,9 @@ public class ScreenSize extends CordovaPlugin {
       int height = dm.heightPixels;
 
       double xdpi = (double)dm.xdpi;
+      double ydpi = (double)dm.ydpi;
       double wi = (double)width / xdpi;
-      double he = (double)height / (double)dm.ydpi;
+      double he = (double)height / ydpi;
       double x = Math.pow(wi, 2);
       double y = Math.pow(he, 2);
 
@@ -40,7 +41,8 @@ public class ScreenSize extends CordovaPlugin {
         result.put("width", width);
         result.put("height", height);
         result.put("diameter", screenInches);
-        result.put("dpi", xdpi);
+        result.put("xdpi", xdpi);
+        result.put("ydpi", ydpi);
       } catch (JSONException e) {}
 
       callbackContext.success(result);

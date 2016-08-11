@@ -38,8 +38,19 @@ Return values:
 
 * `width` &lt;Number&gt; − screen width in pixels
 * `height` &lt;Number&gt; − screen height in pixels
-* `dpi` &lt;Number&gt; − screen DPI
+* `xdpi` &lt;Number&gt; − physical pixels per inch of the screen in the X dimension
+* `ydpi` &lt;Number&gt; − physical pixels per inch of the screen in the Y dimension
 * `diameter` &lt;Number&gt; − screen diameter in inches (rounded to two decimals)
+
+### Known Issues
+
+The correct device metrics setting is the manufacturer's responsibility. In a few cases the `xdpi` and `ydpi` values are wrong and the diameter calculation returns an incorrect number.
+
+Devices with wrong settings (known so far):
+
+- BLU Life XL (model `BLU LIFE XL`, calculated diameter 8.62" vs. real diameter 5.5")
+- Samsung Galaxy SIII CDMA (model `SPH-L710`, calculated diameter 9.17" vs. real diameter 4.8")
+- ZTE nubia Z7 Max (model `NX505J`, calculated diameter 13.77" vs. real diameter 5.5")
 
 ## iOS Platform Quirks
 
@@ -71,4 +82,4 @@ Return values:
 
 ## LICENSE
 
-cordova-plugin-screensize is licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
+**cordova-plugin-screensize** is licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
