@@ -1,6 +1,6 @@
 # cordova-plugin-screensize
 
-![Platform](https://img.shields.io/badge/platform-android%20%7C%20ios%20%7C%20browser-lightgrey.svg)
+![Platform](https://img.shields.io/badge/platform-android%20%7C%20ios%20%7C%20osx%20%7C%20browser-lightgrey.svg)
 
 A cordova plugin to get the size of the device screen.
 
@@ -14,6 +14,7 @@ cordova plugin add cordova-plugin-screensize
 
 - Android
 - iOS
+- OSX
 - Browser
 
 ## Usage
@@ -63,6 +64,16 @@ Return values:
 * `width` &lt;Number&gt; − rendered pixel width
 * `height` &lt;Number&gt; − rendered pixel height
 * `scale` &lt;Number&gt; − render scale (1× or 2× or 3×)
+
+## OSX Platform Quirks
+
+Return values:
+
+* `width` &lt;Number&gt; − screen width in pixel
+* `height` &lt;Number&gt; − screen height in pixel
+* `physicalWidth` &lt;Number&gt; − width of the display in millimeters
+* `physicalHeight` &lt;Number&gt; − height of the display in millimeters
+* `dpi` &lt;Number&gt; − physical pixels per inch of the display
 
 ## Browser Platform Quirks
 
