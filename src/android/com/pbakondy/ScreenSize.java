@@ -35,6 +35,26 @@ public class ScreenSize extends CordovaPlugin {
 
       double screenInches = Math.round(Math.sqrt(x + y) * 100.0) / 100.0;
 
+      double density_value = (double)dm.density;
+      String density_bucket = "";
+
+      // https://design.google.com/devices/
+      // https://developer.android.com/guide/practices/screens_support.html
+
+      if (density_value < 1.0) {
+        density_bucket = "ldpi";
+      } else if (density_value < 1.5) {
+        density_bucket = "mdpi";
+      } else if (density_value < 2.0) {
+        density_bucket = "hdpi";
+      } else if (density_value < 3.0) {
+        density_bucket = "xhdpi";
+      } else if (density_value < 4.0) {
+        density_bucket = "xxhdpi";
+      } else {
+        density_bucket = "xxxhdpi";
+      }
+
       JSONObject result = new JSONObject();
 
       try {
@@ -43,6 +63,8 @@ public class ScreenSize extends CordovaPlugin {
         result.put("diameter", screenInches);
         result.put("xdpi", xdpi);
         result.put("ydpi", ydpi);
+        result.put("densityValue", density_value);
+        result.put("densityBucket", density_bucket);
       } catch (JSONException e) {}
 
       callbackContext.success(result);

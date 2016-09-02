@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.3.1
+
+- add densityValue and densityBucket to Android platform
+
 ## v1.3.0
 
 - add OSX platform

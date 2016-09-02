@@ -1,6 +1,7 @@
 # cordova-plugin-screensize
 
 ![Platform](https://img.shields.io/badge/platform-android%20%7C%20ios%20%7C%20osx%20%7C%20browser-lightgrey.svg)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R7STJ6V2PNEMA)
 
 A cordova plugin to get the size of the device screen.
 
@@ -42,6 +43,10 @@ Return values:
 * `xdpi` &lt;Number&gt; − physical pixels per inch of the screen in the X dimension
 * `ydpi` &lt;Number&gt; − physical pixels per inch of the screen in the Y dimension
 * `diameter` &lt;Number&gt; − screen diameter in inches (rounded to two decimals)
+* `densityValue` &lt;Number&gt; − density point (`0.75`, `1.0`, `1.5`, `2.0`, `3.0`, `4.0`)
+* `densityBucket` &lt;String&gt; − density bucket (`ldpi`, `mdpi`, `hdpi`, `xhdpi`, `xxhdpi`, `xxxhdpi`)
+
+About density properties see this [Android docs](https://developer.android.com/guide/practices/screens_support.html) and this [Device metrics](https://design.google.com/devices/) page.
 
 ### Known Issues
 
