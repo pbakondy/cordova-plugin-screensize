@@ -53,11 +53,7 @@ About density properties see this [Android docs](https://developer.android.com/g
 
 The correct device metrics setting is the manufacturer's responsibility. In a few cases the `xdpi` and `ydpi` values are wrong and the diameter calculation returns an incorrect number.
 
-Devices with wrong settings (known so far):
-
-- BLU Life XL (model `BLU LIFE XL`, calculated diameter 8.62" vs. real diameter 5.5")
-- Samsung Galaxy SIII CDMA (model `SPH-L710`, calculated diameter 9.17" vs. real diameter 4.8")
-- ZTE nubia Z7 Max (model `NX505J`, calculated diameter 13.77" vs. real diameter 5.5")
+See [DEVICES](DEVICES.md) page
 
 ## iOS Platform Quirks
 
